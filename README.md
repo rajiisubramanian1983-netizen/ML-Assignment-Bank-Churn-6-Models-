@@ -57,7 +57,6 @@ Matthews Correlation Coefficient (MCC)
 |Naive Bayes|0.831|0.805|0.735|0.265|0.390|0.372|
 |Random Forest (Ensemble)|0.848|0.809|0.738|0.388|0.509|0.460|
 |XGBoost (Ensemble)|0.856|0.838|0.754|0.430|0.548|0.496|
-
 |**6. Model Performance Observations**|||||||
 |ML Model|Observation||||||
 |---------|-------------||||||
