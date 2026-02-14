@@ -1,5 +1,6 @@
 Name :RAJALAKSHMI S
 BITS ID :2025AA05262
+
 **1. Problem Statement**
 The objective of this assignment is to predict bank customer churn using machine learning models.
 Given historical customer data (demographics, account information, and behavior), the goal is to build models that classify whether a customer will exit the bank (churn) or stay.
@@ -118,6 +119,14 @@ https://github.com/rajiisubramanian1983-netizen/ML-Assignment-Bank-Churn-6-Model
 
 ScreenShot 
 
-<img width="940" height="461" alt="image" src="https://github.com/user-attachments/assets/1964812a-77ec-4514-a9ff-210c2ade4c66" />
+<img width="940" height="466" alt="image" src="https://github.com/user-attachments/assets/114e5440-d338-4b52-9298-1dc1cf56d04a" />
+
+
+
+
+<img width="940" height="429" alt="image" src="https://github.com/user-attachments/assets/65a89018-6c7b-4b58-a34e-3571be105ca4" />
+
+
+
 
 
