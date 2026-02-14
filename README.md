@@ -1,6 +1,8 @@
 **1. Problem Statement**
-The objective of this project is to predict whether a bank customer will churn (leave the bank) based on their demographic, account, and transaction-related information using machine learning classification models.
+The objective of this assignment is to predict bank customer churn using machine learning models.
+Given historical customer data (demographics, account information, and behavior), the goal is to build models that classify whether a customer will exit the bank (churn) or stay.
 This is a binary classification problem in the banking domain, where the target variable indicates whether a customer has exited the bank.
+The models are trained on the provided dataset, evaluated using multiple metrics, and finally deployed as an interactive web application using Streamlit Community Cloud.
 **2. Dataset Description**
 Dataset Source: Kaggle – Bank Customer Churn Dataset
 Domain: Banking
@@ -23,6 +25,11 @@ HasCrCard
 IsActiveMember
 EstimatedSalary
 The dataset is moderately imbalanced, hence robust metrics such as AUC and Matthews Correlation Coefficient (MCC) are used for evaluation.
+Columns dropped before modeling:
+RowNumber, CustomerId, Surname (ID-like columns that do not help prediction)
+Preprocessing:
+Missing values in Exited are removed.
+Categorical columns (Geography, Gender) are label‑encoded using LabelEncoder.
 **3. Machine Learning Models Used**
 The following six classification models were implemented on the same dataset:
 Logistic Regression
@@ -31,6 +38,7 @@ K-Nearest Neighbors (KNN)
 Naive Bayes (Gaussian)
 Random Forest (Ensemble)
 XGBoost (Ensemble)
+Each trained model is saved as a .pkl file and loaded in the Streamlit app for evaluation on the test dataset
 **4. Evaluation Metrics**
 Each model was evaluated using the following metrics:
 Accuracy
@@ -43,12 +51,12 @@ Matthews Correlation Coefficient (MCC)
 
 |ML Model|Accuracy|AUC|Precision|Recall|F1 Score|MCC|
 |-|-|-|-|-|-|-|
-|Logistic Regression|0.805|0.771|0.589|0.143|0.229|0.216|
-|Decision Tree|0.776|0.664|0.453|0.476|0.464|0.323|
-|KNN|0.835|0.772|0.662|0.385|0.487|0.418|
-|Naive Bayes|0.829|0.814|0.755|0.235|0.359|0.357|
-|Random Forest (Ensemble)|0.864|0.846|0.782|0.459|0.578|0.529|
-|XGBoost (Ensemble)|0.847|0.833|0.678|0.471|0.556|0.478|
+|Logistic Regression|0.807|0.760|0.580|0.197|0.294|0.254|
+|Decision Tree|0.774|0.651|0.444|0.442|0.443|0.302|
+|KNN|0.825|0.710|0.640|0.314|0.422|0.361|
+|Naive Bayes|0.831|0.805|0.735|0.265|0.390|0.372|
+|Random Forest (Ensemble)|0.848|0.809|0.738|0.388|0.509|0.460|
+|XGBoost (Ensemble)|0.856|0.838|0.754|0.430|0.548|0.496|
 |**6. Model Performance Observations**|||||||
 |ML Model|Observation||||||
 |---------|-------------||||||
