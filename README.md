@@ -16,18 +16,30 @@ Number of features: 13+
 Target Variable: Exited
 1 → Customer churned
 0 → Customer did not churn
+
 Features Used:
 CreditScore
+
 Geography
+
 Gender
+
 Age
+
 Tenure
+
 Balance
+
 NumOfProducts
+
 HasCrCard
+
 IsActiveMember
+
 EstimatedSalary
+
 The dataset is moderately imbalanced, hence robust metrics such as AUC and Matthews Correlation Coefficient (MCC) are used for evaluation.
+
 Columns dropped before modeling:
 RowNumber, CustomerId, Surname (ID-like columns that do not help prediction)
 Preprocessing:
