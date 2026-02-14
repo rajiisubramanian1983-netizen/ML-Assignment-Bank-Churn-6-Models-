@@ -42,9 +42,11 @@ The dataset is moderately imbalanced, hence robust metrics such as AUC and Matth
 
 Columns dropped before modeling:
 RowNumber, CustomerId, Surname (ID-like columns that do not help prediction)
+
 Preprocessing:
 Missing values in Exited are removed.
 Categorical columns (Geography, Gender) are label‑encoded using LabelEncoder.
+
 **3. Machine Learning Models Used**
 The following six classification models were implemented on the same dataset:
 Logistic Regression
@@ -54,6 +56,7 @@ Naive Bayes (Gaussian)
 Random Forest (Ensemble)
 XGBoost (Ensemble)
 Each trained model is saved as a .pkl file and loaded in the Streamlit app for evaluation on the test dataset
+
 **4. Evaluation Metrics**
 Each model was evaluated using the following metrics:
 Accuracy
@@ -72,6 +75,7 @@ Matthews Correlation Coefficient (MCC)
 |Naive Bayes|0.831|0.805|0.735|0.265|0.390|0.372|
 |Random Forest (Ensemble)|0.848|0.809|0.738|0.388|0.509|0.460|
 |XGBoost (Ensemble)|0.856|0.838|0.754|0.430|0.548|0.496|
+
 |**6. Model Performance Observations**|||||||
 |ML Model|Observation||||||
 |---------|-------------||||||
