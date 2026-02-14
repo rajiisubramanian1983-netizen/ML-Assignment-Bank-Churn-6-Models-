@@ -88,13 +88,21 @@ Matthews Correlation Coefficient (MCC)
 |XGBoost (Ensemble)|Delivers the best overall performance: highest accuracy (0.856) and AUC (0.838), showing excellent separation between churn and non‑churn customers.Precision (0.754) and recall (0.430) are both higher than for other models, so it captures more churners while keeping predictions precise.F1 (0.548) and MCC (0.496) are the highest, making XGBoost the most effective and balanced model for this dataset among all six|
 
 Deployment on Streamlit Community Cloud
+
 The trained models (.pkl files for all 6 models, scaler, and label encoders) are stored in the model/ folder.
+
 The app is implemented in app.py using Streamlit, and loads the .pkl files using joblib.load.
+
 The project is pushed to a GitHub repository, and the app is deployed on Streamlit Community Cloud by linking the GitHub repo and setting app.py as the main file.
+
 The deployed app allows the user to:
+
 Download a sample test CSV.
+
 Upload a test CSV with the same schema.
+
 Select any of the 6 models.
+
 View all evaluation metrics, confusion matrix, and classification report directly in the browser.
 
 LIVE DEMO 
