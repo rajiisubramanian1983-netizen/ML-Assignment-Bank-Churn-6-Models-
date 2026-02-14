@@ -76,17 +76,16 @@ Matthews Correlation Coefficient (MCC)
 |Random Forest (Ensemble)|0.848|0.809|0.738|0.388|0.509|0.460|
 |XGBoost (Ensemble)|0.856|0.838|0.754|0.430|0.548|0.496|
 
-|**6. Model Performance Observations**|||||||
+**6. Model Performance Observations**
 
 |ML Model|Observation|
-|||||
-|---------|-------------||||||
-|Logistic Regression|Provides a strong baseline with high accuracy but very low recall due to class imbalance. The low MCC indicates limited correlation in identifying churn customers.||||||
-|Decision Tree|Captures non-linear relationships in the data and improves recall compared to Logistic Regression, but may overfit and shows moderate MCC.||||||
-|KNN|Performance is sensitive to feature scaling. It achieves balanced precision and recall but does not significantly outperform tree-based models.||||||
-|Naive Bayes|Assumes feature independence, resulting in lower precision but higher recall. Useful for identifying churners but less accurate overall.||||||
-|Random Forest (Ensemble)|Demonstrates improved generalization and balanced performance across all metrics, with higher AUC and MCC compared to individual models.||||||
-|XGBoost (Ensemble)|Achieves the best overall performance with the highest AUC, F1 score, and MCC, effectively handling class imbalance and complex feature interactions.||||||
+|-|-|
+|Logistic Regression|Provides a strong baseline with high accuracy but very low recall due to class imbalance. The low MCC indicates limited correlation in identifying churn customers.|
+|Decision Tree|Captures non-linear relationships in the data and improves recall compared to Logistic Regression, but may overfit and shows moderate MCC.|
+|KNN|Performance is sensitive to feature scaling. It achieves balanced precision and recall but does not significantly outperform tree-based models.|
+|Naive Bayes|Assumes feature independence, resulting in lower precision but higher recall. Useful for identifying churners but less accurate overall.|
+|Random Forest (Ensemble)|Demonstrates improved generalization and balanced performance across all metrics, with higher AUC and MCC compared to individual models.|
+|XGBoost (Ensemble)|Achieves the best overall performance with the highest AUC, F1 score, and MCC, effectively handling class imbalance and complex feature interactions.|
 
 
 
