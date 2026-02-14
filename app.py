@@ -85,6 +85,20 @@ if uploaded_file is not None:
             st.error("Scaler / encoders not found in model/ folder.")
             st.stop()
 
+        # Columns used during training (same order as notebook)
+        feature_columns = [
+            "CreditScore",
+            "Geography",
+            "Gender",
+            "Age",
+            "Tenure",
+            "Balance",
+            "NumOfProducts",
+            "HasCrCard",
+            "IsActiveMember",
+            "EstimatedSalary",
+        ]
+
         # Apply same encoding as training, but handle unseen categories
         if "Geography" in X_test.columns:
             known_geo = list(le_geo.classes_)
@@ -103,6 +117,17 @@ if uploaded_file is not None:
                 other=default_gender,
             )
             X_test["Gender"] = le_gender.transform(X_test["Gender"])
+
+        # Keep only the training features, in the same order
+        try:
+            X_test = X_test[feature_columns]
+        except KeyError:
+            st.error(
+                "Uploaded CSV does not have the exact feature columns used in training.\n"
+                "Expected columns: "
+                + ", ".join(feature_columns)
+            )
+            st.stop()
 
         # Scaled version
         X_test_scaled = scaler.transform(X_test)
