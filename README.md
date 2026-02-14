@@ -77,7 +77,9 @@ Matthews Correlation Coefficient (MCC)
 |XGBoost (Ensemble)|0.856|0.838|0.754|0.430|0.548|0.496|
 
 |**6. Model Performance Observations**|||||||
-|ML Model|Observation||||||
+
+|ML Model|Observation|
+|||||
 |---------|-------------||||||
 |Logistic Regression|Provides a strong baseline with high accuracy but very low recall due to class imbalance. The low MCC indicates limited correlation in identifying churn customers.||||||
 |Decision Tree|Captures non-linear relationships in the data and improves recall compared to Logistic Regression, but may overfit and shows moderate MCC.||||||
