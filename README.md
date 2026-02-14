@@ -3,10 +3,12 @@ The objective of this assignment is to predict bank customer churn using machine
 Given historical customer data (demographics, account information, and behavior), the goal is to build models that classify whether a customer will exit the bank (churn) or stay.
 This is a binary classification problem in the banking domain, where the target variable indicates whether a customer has exited the bank.
 The models are trained on the provided dataset, evaluated using multiple metrics, and finally deployed as an interactive web application using Streamlit Community Cloud.
+
 **2. Dataset Description**
 Dataset Source: Kaggle – Bank Customer Churn Dataset
 Domain: Banking
 Problem Type: Binary Classification
+
 **Dataset Characteristics:**
 Number of instances: ~10,000
 Number of features: 13+
