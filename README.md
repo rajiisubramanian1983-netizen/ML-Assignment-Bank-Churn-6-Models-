@@ -10,6 +10,7 @@ Domain: Banking
 Problem Type: Binary Classification
 
 **Dataset Characteristics:**
+
 Number of instances: ~10,000
 Number of features: 13+
 Target Variable: Exited
