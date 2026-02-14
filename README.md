@@ -80,7 +80,7 @@ Matthews Correlation Coefficient (MCC)
 
 |ML Model|Observation|
 |-|-|
-|Achieves moderate accuracy (0.807) and AUC (0.760), showing reasonable ranking ability but not the best.
+|Logistic Regression||Achieves moderate accuracy (0.807) and AUC (0.760), showing reasonable ranking ability but not the best.
 Precision is low‑medium (0.580) and recall is very low (0.197), meaning it predicts few churners and misses many actual churners
 F1 (0.294) and MCC (0.254) are low, indicating overall weak performance on the positive (churn) class|
 |Decision Tree|Captures non-linear relationships in the data and improves recall compared to Logistic Regression, but may overfit and shows moderate MCC.|
