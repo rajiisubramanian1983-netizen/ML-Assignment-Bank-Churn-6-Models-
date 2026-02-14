@@ -81,25 +81,30 @@ Matthews Correlation Coefficient (MCC)
 |ML Model|Observation|
 |-|-|
 |Logistic Regression|Achieves moderate accuracy (0.807) and AUC (0.760), showing reasonable ranking ability but not the best.Precision is low‑medium (0.580) and recall is very low (0.197), meaning it predicts few churners and misses many actual churners.F1 (0.294) and MCC (0.254) are low, indicating overall weak performance on the positive (churn) class|
-|Decision Tree|Accuracy (0.774) and AUC (0.651) are lower than Logistic Regression and the ensemble models.Precision (0.444) and recall (0.442) are more balanced, so it catches more churners but with more false positives compared to LR.F1 (0.443) and MCC (0.302) show it is better than Logistic Regression at identifying churners, but overall still weaker than KNN, Naive Bayes, Random Forest, and XGBoost.|
-|KNN|Performance is sensitive to feature scaling. It achieves balanced precision and recall but does not significantly outperform tree-based models.|
-|Naive Bayes|Assumes feature independence, resulting in lower precision but higher recall. Useful for identifying churners but less accurate overall.|
-|Random Forest (Ensemble)|Demonstrates improved generalization and balanced performance across all metrics, with higher AUC and MCC compared to individual models.|
-|XGBoost (Ensemble)|Achieves the best overall performance with the highest AUC, F1 score, and MCC, effectively handling class imbalance and complex feature interactions.|
+|Decision Tree|Accuracy (0.774) and AUC (0.651) are lower than Logistic Regression and the ensemble models.Precision (0.444) and recall (0.442) are more balanced, so it catches more churners but with more false positives compared to LR.F1 (0.443) and MCC (0.302) so it is better than Logistic Regression at identifying churners, but overall still weaker than KNN, Naive Bayes, Random Forest, and XGBoost.|
+|KNN|Accuracy (0.825) is better than LR and Decision Tree, but AUC (0.710) is still below the best models.​Precision is good (0.640), but recall is only 0.314, so it identifies churners more confidently but still misses many.F1 (0.422) and MCC (0.361) show a noticeable improvement over LR and Decision Tree, but not as strong as Naive Bayes or the ensembles..|
+|Naive Bayes|Accuracy (0.831) and especially AUC (0.805) are strong, indicating good ranking between churn and non‑churn customers.​Precision is high (0.735), but recall is low (0.265), meaning it predicts churners with high confidence but finds only a small fraction of them.F1 (0.390) and MCC (0.372) are slightly better than kNN, suggesting Naive Bayes is more reliable overall despite low recall..|
+|Random Forest (Ensemble)|Shows high accuracy (0.848) and AUC (0.809), clearly better than most non‑ensemble models.Precision is high (0.738) and recall (0.388) improves compared to LR, kNN, and Naive Bayes, so it balances catching more churners without too many false alarms.F1 (0.509) and MCC (0.460) are strong, indicating good overall classification performance and better handling of both classes.|
+|XGBoost (Ensemble)|Delivers the best overall performance: highest accuracy (0.856) and AUC (0.838), showing excellent separation between churn and non‑churn customers.Precision (0.754) and recall (0.430) are both higher than for other models, so it captures more churners while keeping predictions precise.F1 (0.548) and MCC (0.496) are the highest, making XGBoost the most effective and balanced model for this dataset among all six|
 
-
+Deployment on Streamlit Community Cloud
+The trained models (.pkl files for all 6 models, scaler, and label encoders) are stored in the model/ folder.
+The app is implemented in app.py using Streamlit, and loads the .pkl files using joblib.load.
+The project is pushed to a GitHub repository, and the app is deployed on Streamlit Community Cloud by linking the GitHub repo and setting app.py as the main file.
+The deployed app allows the user to:
+Download a sample test CSV.
+Upload a test CSV with the same schema.
+Select any of the 6 models.
+View all evaluation metrics, confusion matrix, and classification report directly in the browser.
 
 LIVE DEMO 
 
-
-https://ml-assignment-2-bank-churn-yehaq9itdm2appzgpoo7zcx.streamlit.app/
-
-
+https://vztbalhvmvynayrmwpkarm.streamlit.app/
 
 GitHub 
 
 
-https://github.com/rajiisubramanian1983-netizen/ML-Assignment-2-Bank-Churn/tree/main
+https://github.com/rajiisubramanian1983-netizen/ML-Assignment-Bank-Churn-6-Models-
 
 ScreenShot 
 
