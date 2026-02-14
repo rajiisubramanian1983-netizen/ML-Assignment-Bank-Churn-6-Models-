@@ -80,7 +80,9 @@ Matthews Correlation Coefficient (MCC)
 
 |ML Model|Observation|
 |-|-|
-|Logistic Regression|Provides a strong baseline with high accuracy but very low recall due to class imbalance. The low MCC indicates limited correlation in identifying churn customers.|
+|Achieves moderate accuracy (0.807) and AUC (0.760), showing reasonable ranking ability but not the best.
+Precision is low‑medium (0.580) and recall is very low (0.197), meaning it predicts few churners and misses many actual churners
+F1 (0.294) and MCC (0.254) are low, indicating overall weak performance on the positive (churn) class|
 |Decision Tree|Captures non-linear relationships in the data and improves recall compared to Logistic Regression, but may overfit and shows moderate MCC.|
 |KNN|Performance is sensitive to feature scaling. It achieves balanced precision and recall but does not significantly outperform tree-based models.|
 |Naive Bayes|Assumes feature independence, resulting in lower precision but higher recall. Useful for identifying churners but less accurate overall.|
