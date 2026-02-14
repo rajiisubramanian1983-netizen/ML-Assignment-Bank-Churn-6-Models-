@@ -1,3 +1,5 @@
+Name :RAJALAKSHMI S
+BITS ID :2025AA05262
 **1. Problem Statement**
 The objective of this assignment is to predict bank customer churn using machine learning models.
 Given historical customer data (demographics, account information, and behavior), the goal is to build models that classify whether a customer will exit the bank (churn) or stay.
