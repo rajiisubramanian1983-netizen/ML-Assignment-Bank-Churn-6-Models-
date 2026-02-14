@@ -85,11 +85,25 @@ if uploaded_file is not None:
             st.error("Scaler / encoders not found in model/ folder.")
             st.stop()
 
-        # Apply same encoding as training
-        if "Geography" in X_test.columns:
-            X_test["Geography"] = le_geo.transform(X_test["Geography"])
-        if "Gender" in X_test.columns:
-            X_test["Gender"] = le_gender.transform(X_test["Gender"])
+       # Apply same encoding as training, but handle unseen categories
+
+if "Geography" in X_test.columns:
+    known_geo = list(le_geo.classes_)
+    default_geo = known_geo[0]
+    X_test["Geography"] = X_test["Geography"].where(
+        X_test["Geography"].isin(known_geo),
+        other=default_geo
+    )
+    X_test["Geography"] = le_geo.transform(X_test["Geography"])
+
+if "Gender" in X_test.columns:
+    known_gender = list(le_gender.classes_)
+    default_gender = known_gender[0]
+    X_test["Gender"] = X_test["Gender"].where(
+        X_test["Gender"].isin(known_gender),
+        other=default_gender
+    )
+    X_test["Gender"] = le_gender.transform(X_test["Gender"])
 
         # Scaled version
         X_test_scaled = scaler.transform(X_test)
